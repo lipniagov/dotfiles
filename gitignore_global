@@ -1,0 +1,8 @@
+_.DS_Store
+*~
+tags
+log/
+db/*.sqlite3
+.bundle
+.svn
+
