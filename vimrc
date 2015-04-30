@@ -56,6 +56,9 @@ Plugin 'Valloric/YouCompleteMe'
 " Adequate results for (CtrlP + Ag)
 Plugin 'FelikZ/ctrlp-py-matcher'
 
+" Toggles between relative and absolute line numbers automatically
+Plugin 'jeffkreeftmeijer/vim-numbertoggle.git'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -191,8 +194,8 @@ nmap <C-h> :nohl<cr>
 map <leader>h :nohlsearch<cr>
 
 " Search results(grep) - next and prev
-map <C-n> :cn<CR>
-map <C-p> :cp<CR>
+autocmd VimEnter * map <C-n> :cn<CR>
+autocmd VimEnter * map <C-p> :cp<CR>
 
 map \n :NERDTreeToggle<CR>
 map \m :NERDTreeFind<CR>
