@@ -98,6 +98,10 @@ set grepprg=ag
 " Ignore stuff that can't be opened
 set wildignore+=tmp/**
 
+" Don't clutter my dirs up with swp and tmp files
+set backupdir=~/.tmp
+set directory=~/.tmp
+
 " ========================================================================
 " Editor && Ruby
 " ========================================================================
@@ -178,6 +182,9 @@ if executable('ag')
     \ --ignore .hg
     \ --ignore .DS_Store
     \ -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
 endif
 
 " Use external matcher for adequate results
