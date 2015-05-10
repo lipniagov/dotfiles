@@ -62,6 +62,9 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle.git'
 " Enhanced tab behavior based on context
 Plugin 'ervandew/supertab'
 
+" Git wrapper
+Plugin 'tpope/vim-fugitive'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
