@@ -65,6 +65,10 @@ Plugin 'ervandew/supertab'
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
 
+" Run Rspec from VIM
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-dispatch'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -204,6 +208,13 @@ let g:SuperTabCrMapping                = 0
 
 " - - - - - - - - - - - - - -
 "
+" Vim-RSpec settings
+"
+let g:rspec_command = "Dispatch bin/rspec {spec}"
+let g:rspec_runner = "os_x_iterm2"
+
+" - - - - - - - - - - - - - -
+"
 " YouCompleteMe settings
 "
 " let g:ycm_dont_warn_on_startup = 0
@@ -251,6 +262,12 @@ let g:ctrlp_map = '<Leader>t'
 " move vertically by visual line
 nmap k gk
 nmap j gj
+
+" RSpec.vim mappings
+map <Leader>s :call RunCurrentSpecFile()<CR>
+map <Leader>q :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " ========================================================================
 
