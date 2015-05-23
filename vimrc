@@ -250,8 +250,9 @@ map <leader>h :nohlsearch<cr>
 autocmd VimEnter * map <C-n> :cn<CR>
 autocmd VimEnter * map <C-p> :cp<CR>
 
-map \n :NERDTreeToggle<CR>
-map \m :NERDTreeFind<CR>
+" NERDTree
+map <Leader>n :NERDTreeToggle<CR>
+map <Leader>m :NERDTreeFind<CR>
 
 " Trigger Ag
 nnoremap <Leader>f :Ag<Space>
@@ -267,7 +268,11 @@ nmap j gj
 map <Leader>s :call RunCurrentSpecFile()<CR>
 map <Leader>q :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>w :call RunAllSpecs()<CR>
+
+" vim-rails mappings
+map <Leader>a :A <CR>
+map <Leader>r :R <CR>
 
 " ========================================================================
 
