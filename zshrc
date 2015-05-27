@@ -92,5 +92,10 @@ alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump 
 alias tlf="tail -f"
 alias s="bin/rspec"
 alias rspecd="rspec -fd spec/"
+
+alias gsf="git show --name-status"
+alias gs="git show"
+
+alias gpmt="git push origin master --tags"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
