@@ -69,6 +69,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-dispatch'
 
+" Status/tab line
+Plugin 'bling/vim-airline'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -212,6 +215,16 @@ let g:SuperTabCrMapping                = 0
 "
 let g:rspec_command = "Dispatch bin/rspec {spec}"
 let g:rspec_runner = "os_x_iterm2"
+
+
+" - - - - - - - - - - - - - -
+"
+" Vim-airline settings
+"
+let g:airline_powerline_fonts = 1
+let g:airline_theme='bubblegum'
+set laststatus=2 "fix vim-airline doesn't appear
+
 
 " - - - - - - - - - - - - - -
 "
