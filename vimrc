@@ -72,6 +72,9 @@ Plugin 'tpope/vim-dispatch'
 " Status/tab line
 Plugin 'bling/vim-airline'
 
+" Shows a git diff sign column and stages/reverts hunks
+Plugin 'airblade/vim-gitgutter'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -286,6 +289,15 @@ map <Leader>w :call RunAllSpecs()<CR>
 " vim-rails mappings
 map <Leader>a :A <CR>
 map <Leader>r :R <CR>
+
+" vim-gitgutter mappings
+nmap ]c <Plug>GitGutterNextHunk
+nmap [c <Plug>GitGutterPrevHunk
+
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hr <Plug>GitGutterRevertHunk
+
+nmap <Leader>hp <Plug>GitGutterPreviewHunk
 
 " ========================================================================
 
