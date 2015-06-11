@@ -75,6 +75,9 @@ Plugin 'bling/vim-airline'
 " Shows a git diff sign column and stages/reverts hunks
 Plugin 'airblade/vim-gitgutter'
 
+" Seamless navigation between tmux panes and vim splits
+Plugin 'christoomey/vim-tmux-navigator'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
