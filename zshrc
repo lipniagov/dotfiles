@@ -54,7 +54,7 @@ plugins=(git wd zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="$PATH:/usr/local/heroku/bin:/Users/lipton/.rvm/gems/ruby-2.1.2/bin:/Users/lipton/.rvm/gems/ruby-2.1.2@global/bin:/Users/lipton/.rvm/rubies/ruby-2.1.2/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/texbin:/Users/lipton/.rvm/bin"
+export PATH="$PATH:/usr/local/heroku/bin:/Users/lipton/.rvm/gems/ruby-2.1.2/bin:/Users/lipton/.rvm/gems/ruby-2.1.2@global/bin:/Users/lipton/.rvm/rubies/ruby-2.1.2/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/texbin:/Users/lipton/.rvm/bin:/Users/lipton/.dotfiles/bin"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/local/bin:$PATH"
 
 DEFAULT_USER="lipton"
