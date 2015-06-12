@@ -78,6 +78,9 @@ Plugin 'airblade/vim-gitgutter'
 " Seamless navigation between tmux panes and vim splits
 Plugin 'christoomey/vim-tmux-navigator'
 
+" Vim and tmux, sittin' in a tree...
+Plugin 'christoomey/vim-tmux-runner'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -117,6 +120,9 @@ set wildignore+=tmp/**
 " Don't clutter my dirs up with swp and tmp files
 set backupdir=~/.tmp
 set directory=~/.tmp
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
 
 " ========================================================================
 " Editor && Ruby
@@ -262,7 +268,6 @@ map K <Nop>
 map Q <Nop>
 
 " Clear search highlighting
-nmap <C-h> :nohl<cr>
 map <leader>h :nohlsearch<cr>
 
 " Search results(grep) - next and prev
@@ -283,6 +288,10 @@ let g:ctrlp_map = '<Leader>t'
 nmap k gk
 nmap j gj
 
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
 " RSpec.vim mappings
 map <Leader>s :call RunCurrentSpecFile()<CR>
 map <Leader>q :call RunNearestSpec()<CR>
@@ -296,11 +305,12 @@ map <Leader>r :R <CR>
 " vim-gitgutter mappings
 nmap ]c <Plug>GitGutterNextHunk
 nmap [c <Plug>GitGutterPrevHunk
-
 nmap <Leader>ha <Plug>GitGutterStageHunk
 nmap <Leader>hr <Plug>GitGutterRevertHunk
-
 nmap <Leader>hp <Plug>GitGutterPreviewHunk
+
+" vim-tmux-runner mappings
+nnoremap <leader>pry :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'pry'}<cr>
 
 " ========================================================================
 
