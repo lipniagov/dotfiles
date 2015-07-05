@@ -312,5 +312,8 @@ nmap <Leader>hp <Plug>GitGutterPreviewHunk
 " vim-tmux-runner mappings
 nnoremap <leader>pry :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'pry'}<cr>
 
+" grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 " ========================================================================
 
