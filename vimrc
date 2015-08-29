@@ -81,6 +81,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Vim and tmux, sittin' in a tree...
 Plugin 'christoomey/vim-tmux-runner'
 
+" Show json in style
+Plugin 'elzr/vim-json'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -314,6 +317,13 @@ nnoremap <leader>pry :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd'
 
 " grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" Requires 'jq' (brew install jq)
+function! s:PrettyJSON()
+  %!jq .
+  set filetype=json
+endfunction
+command! PrettyJSON :call <sid>PrettyJSON()
 
 " ========================================================================
 
