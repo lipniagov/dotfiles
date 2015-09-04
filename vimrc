@@ -84,6 +84,9 @@ Plugin 'christoomey/vim-tmux-runner'
 " Show json in style
 Plugin 'elzr/vim-json'
 
+" Dash integration
+Plugin 'rizzatti/dash.vim'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -325,5 +328,7 @@ function! s:PrettyJSON()
 endfunction
 command! PrettyJSON :call <sid>PrettyJSON()
 
+" Trigger Dash.VIM
+nmap <silent> <leader>d <Plug>DashSearch
 " ========================================================================
 
