@@ -87,6 +87,9 @@ Plugin 'elzr/vim-json'
 " Dash integration
 Plugin 'rizzatti/dash.vim'
 
+" Coffee script
+Plugin 'kchmck/vim-coffee-script'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -141,9 +144,9 @@ augroup myfiletypes
   " Clear old autocmds in group
   autocmd!
   " autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,eruby,yaml setlocal ai sw=2 sts=2 et
-  autocmd FileType ruby,eruby,yaml setlocal path+=lib
-  autocmd FileType ruby,eruby,yaml setlocal colorcolumn=80,120
+  autocmd FileType ruby,eruby,yaml,coffee setlocal ai sw=2 sts=2 et
+  autocmd FileType ruby,eruby,yaml,coffee setlocal path+=lib
+  autocmd FileType ruby,eruby,yaml,coffee setlocal colorcolumn=80,120
   " highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
   " Make ?s part of words
