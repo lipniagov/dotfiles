@@ -90,6 +90,9 @@ Plugin 'rizzatti/dash.vim'
 " Coffee script
 Plugin 'kchmck/vim-coffee-script'
 
+" Reload vim gitgutter on focus (after commit)
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
