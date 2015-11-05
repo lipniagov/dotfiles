@@ -93,6 +93,12 @@ Plugin 'kchmck/vim-coffee-script'
 " Reload vim gitgutter on focus (after commit)
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 
+" Slim
+Plugin 'slim-template/vim-slim.git'
+
+" Markdown preview
+Plugin 'shime/vim-livedown.git'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -336,5 +342,18 @@ command! PrettyJSON :call <sid>PrettyJSON()
 
 " Trigger Dash.VIM
 nmap <silent> <leader>d <Plug>DashSearch
+
+" Quickfix list args
+" (http://stackoverflow.com/questions/5686206/search-replace-using-quickfix-list-in-vim/5686810#5686810)
+command! -nargs=0 -bar Qargs execute 'args ' . QuickfixFilenames()
+function! QuickfixFilenames()
+  " Building a hash ensures we get each buffer only once
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(values(buffer_numbers))
+endfunction
+
 " ========================================================================
 
