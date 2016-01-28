@@ -70,7 +70,8 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-dispatch'
 
 " Status/tab line
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Shows a git diff sign column and stages/reverts hunks
 Plugin 'airblade/vim-gitgutter'
