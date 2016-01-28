@@ -10,3 +10,7 @@
 	default = current
 [pull]
 	default = current
+[github]
+	user = liptonshmidt
+[gist]
+	private = true

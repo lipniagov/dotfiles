@@ -99,6 +99,12 @@ Plugin 'slim-template/vim-slim.git'
 " Markdown preview
 Plugin 'shime/vim-livedown.git'
 
+" Post current buffer to gist
+Plugin 'mattn/gist-vim'
+
+" Need for gist-vim
+Plugin 'mattn/webapi-vim'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -255,7 +261,13 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='bubblegum'
 set laststatus=2 "fix vim-airline doesn't appear
 
-
+" - - - - - - - - - - - - - -
+"
+"
+" Gist-Vim settings
+let g:gist_post_private = 1
+"
+"
 " - - - - - - - - - - - - - -
 "
 " YouCompleteMe settings
