@@ -1,3 +1,5 @@
 let mapleader = ","
 
 :imap jk <Esc>
+set visualbell
+set noerrorbells
