@@ -109,6 +109,12 @@ Plugin 'mattn/webapi-vim'
 " Easy motion
 Plugin 'easymotion/vim-easymotion'
 
+" Ember support
+Plugin 'dsawardekar/ember.vim'
+
+" Working with mustache and handlebars templates
+Plugin 'mustache/vim-mustache-handlebars'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -231,6 +237,9 @@ if executable('ag')
     \ --ignore .svn
     \ --ignore .hg
     \ --ignore .DS_Store
+    \ --ignore node_modules
+    \ --ignore bower_components
+    \ --ignore tmp
     \ -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
