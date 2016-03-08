@@ -3,3 +3,6 @@ let mapleader = ","
 :imap jk <Esc>
 set visualbell
 set noerrorbells
+
+" Yank to global buffer
+set clipboard+=unnamed
