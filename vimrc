@@ -115,6 +115,9 @@ Plugin 'dsawardekar/ember.vim'
 " Working with mustache and handlebars templates
 Plugin 'mustache/vim-mustache-handlebars'
 
+" Elixir integration
+Plugin 'elixir-lang/vim-elixir'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
