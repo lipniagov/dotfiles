@@ -82,7 +82,7 @@ ensure_tmux_is_running() {
   fi
 }
 
-ensure_tmux_is_running
+# ensure_tmux_is_running
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

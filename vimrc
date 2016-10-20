@@ -118,6 +118,9 @@ Plugin 'mustache/vim-mustache-handlebars'
 " Elixir integration
 Plugin 'elixir-lang/vim-elixir'
 
+" Support command mode in Russian keyboard layout 
+Plugin 'powerman/vim-plugin-ruscmd.git'
+
 " - - - - - - - - - - - - - - -
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -195,6 +198,13 @@ set showmatch
 set smarttab
 set shiftround
 set sw=2
+
+set mouse=a
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
 
 " ========================================================================
 " Plugin-specific settings
