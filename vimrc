@@ -98,7 +98,7 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'slim-template/vim-slim.git'
 
 " Markdown preview
-Plugin 'shime/vim-livedown.git'
+" Plugin 'shime/vim-livedown.git'
 
 " Post current buffer to gist
 Plugin 'mattn/gist-vim'
@@ -355,6 +355,12 @@ nmap j gj
 " zoom a vim pane, <C-w>= to re-balance
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
+
+" move between splits
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 " RSpec.vim mappings
 map <Leader>s :call RunCurrentSpecFile()<CR>
