@@ -7,10 +7,14 @@
 	autocrlf = false
 	editor = vim
 [push]
-	default = current
+	default = simple
 [pull]
 	default = current
 [github]
 	user = liptonshmidt
 [gist]
 	private = true
+[branch]
+	autosetuprebase = always
+[rebase]
+	autosquash = true
