@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -54,7 +57,7 @@ plugins=(git wd zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="$PATH:/usr/local/heroku/bin:/Users/lipton/.rvm/gems/ruby-2.1.2/bin:/Users/lipton/.rvm/gems/ruby-2.1.2@global/bin:/Users/lipton/.rvm/rubies/ruby-2.1.2/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/texbin:/Users/lipton/.rvm/bin:/Users/lipton/.dotfiles/bin"
+export PATH="$PATH/usr/local/Cellar/vim:/usr/local/heroku/bin:/Users/lipton/.rvm/gems/ruby-2.1.2/bin:/Users/lipton/.rvm/gems/ruby-2.1.2@global/bin:/Users/lipton/.rvm/rubies/ruby-2.1.2/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/texbin:/Users/lipton/.rvm/bin:/Users/lipton/.dotfiles/bin"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/local/bin:$PATH"
 # rbenv stuff
 #
@@ -70,19 +73,22 @@ DEFAULT_USER="lipton"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
-# Never Leaving Tmux
-_not_inside_tmux() { [[ -z "$TMUX" ]] }
+alias vim="nvim"
+alias vi="nvim"
 
-ensure_tmux_is_running() {
-  if _not_inside_tmux; then
-    tat
-  fi
-}
+# Never Leaving Tmux
+# _not_inside_tmux() { [[ -z "$TMUX" ]] }
+
+# ensure_tmux_is_running() {
+#   if _not_inside_tmux; then
+#     tat
+#   fi
+# }
 
 # ensure_tmux_is_running
 
@@ -98,7 +104,8 @@ ensure_tmux_is_running() {
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias sshb="ssh-add ~/.ssh/boomstarter"
+alias rake='noglob rake'
+alias ssha="ssh-add ~/.ssh/id_rsa"
 alias bbb="tput bel"
 alias be="bundle exec"
 alias capc="cap production support:console"

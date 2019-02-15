@@ -1,7 +1,7 @@
 " ========================================================================
 " Vundle stuff
 " ========================================================================
-
+language en_US
 set nocompatible " Required by vundle
 filetype off     " Required by vundle
 
@@ -203,7 +203,9 @@ set mouse=a
 if has("mouse_sgr")
     set ttymouse=sgr
 else
+  if !has('nvim')
     set ttymouse=xterm2
+  endif
 end
 
 " ========================================================================
