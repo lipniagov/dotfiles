@@ -56,9 +56,6 @@ Plugin 'Raimondi/delimitMate'
 " Adequate results for (CtrlP + Ag)
 Plugin 'FelikZ/ctrlp-py-matcher'
 
-" Toggles between relative and absolute line numbers automatically
-Plugin 'jeffkreeftmeijer/vim-numbertoggle.git'
-
 " Enhanced tab behavior based on context
 Plugin 'ervandew/supertab'
 
@@ -141,7 +138,7 @@ set autoindent                  " auto indenting
 set showcmd                     " display incomplete commands
 set wildmenu
 
-set relativenumber              " line numbers
+set number                      " line numbers
 
 " searching
 set hlsearch     " Highlight all matches after entering pattern
