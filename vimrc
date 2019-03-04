@@ -361,11 +361,14 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
+" Postgres-related mappings
+map <Leader>q :w !psql<CR>
+
 " RSpec.vim mappings
-map <Leader>s :call RunCurrentSpecFile()<CR>
-map <Leader>q :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>w :call RunAllSpecs()<CR>
+" map <Leader>s :call RunCurrentSpecFile()<CR>
+" map <Leader>q :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>w :call RunAllSpecs()<CR>
 
 " vim-rails mappings
 map <Leader>a :A <CR>
