@@ -65,6 +65,8 @@ export PATH="/Users/lipton/Library/Python/2.7/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+export PATH=$PATH:/usr/local/go/bin
+
 DEFAULT_USER="lipton"
 # export MANPATH="/usr/local/man:$MANPATH"
 
