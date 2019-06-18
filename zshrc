@@ -65,7 +65,8 @@ export PATH="/Users/lipton/Library/Python/2.7/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Go
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
 DEFAULT_USER="lipton"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -123,5 +124,8 @@ alias gsf="git show --name-status"
 alias gs="git show"
 
 alias gpmt="git push origin master --tags"
+alias rubodiff="git diff --name-only | xargs rubocop"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="/usr/local/opt/node@10/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"

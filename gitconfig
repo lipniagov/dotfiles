@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Alexey Lipnyagov
-	email = liptonshmidt@gmail.com
+	name = Aleksei Lipniagov
+	email = alipniagov@gitlab.com
 [core]
 	excludesfile = /Users/lipton/.gitignore_global
 	autocrlf = false
@@ -12,6 +12,8 @@
 	default = current
 [github]
 	user = liptonshmidt
+[gitlab]
+	user = alipniagov
 [gist]
 	private = true
 [branch]

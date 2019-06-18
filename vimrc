@@ -222,6 +222,9 @@ let NERDTreeChDirMode=2
 " close window if only nerdTree left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" show hidden files
+let NERDTreeShowHidden=1
+
 " - - - - - - - - - - - - - -
 "
 " vim-auto-save settings
