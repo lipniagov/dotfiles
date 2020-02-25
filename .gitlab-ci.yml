@@ -1,0 +1,29 @@
+# This file is a template, and might need editing before it works on your project.
+# Official language image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/ruby/tags/
+image: "ruby:2.5"
+
+# Pick zero or more services to be used on all builds.
+# Only needed when using a docker container to run your tests in.
+# Check out: http://docs.gitlab.com/ce/ci/docker/using_docker_images.html#what-is-a-service
+before_script:
+  - ruby -v  # Print out ruby version for debugging
+
+# Optional - Delete if not using `rubocop`
+rubocop:
+  script:
+    - ruby -v
+
+
+always-run:
+  script: echo 'this should always run'
+
+on-pull-requests:
+  script: echo 'this should run on pull requests'
+  only:
+    - external_pull_requests
+
+except-pull-requests:
+  script: echo 'this should not run on pull requests'
+  except:
+    - external_pull_requests
