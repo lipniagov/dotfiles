@@ -1,8 +1,9 @@
-_.DS_Store
 *~
-tags
-log/
-db/*.sqlite3
-.bundle
-.svn
 .DS_Store
+.bundle
+.idea
+.svn
+_.DS_Store
+db/*.sqlite3
+log/
+tags
